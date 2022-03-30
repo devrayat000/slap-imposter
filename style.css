@@ -91,6 +91,7 @@ body {
 #donation,
 #units {
   font-size: 1.2rem;
+  position: relative;
 }
 
 #tweet {
@@ -118,6 +119,9 @@ body {
   #donation,
   #units {
     font-size: 1.05rem;
+  }
+  #units {
+    margin-top: 2rem;
   }
   #container {
     width: 100vw;
