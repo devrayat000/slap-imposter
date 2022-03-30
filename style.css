@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+html,
+body {
+  background-color: #fff;
+  height: 100%;
+  /* overscroll-behavior: contain; */
+  /* overflow: hidden; */
+}
+
+#container {
+  max-width: 1000px;
+  width: 100%;
+  height: 90%;
+  position: absolute;
+  margin: 0 auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(#f6f6f6, #fff);
+  /* cursor: cell; */
+}
+
+.loadingclass {
+  height: 100%;
+  width: 100%;
+  /* background-image: url("./src/loading-min.jpg"); */
+  background-color: #fff;
+  background-size: contain;
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+
+.loadingclass img {
+  position: absolute;
+  bottom: 50px;
+  left: 45%;
+  width: 10%;
+}
+
+.unselectable {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  /* user-select: none; */
+}
+
+#record,
+#score, 
+#imposter {
+  position: absolute;
+  left: 50%;
+  display: block;
+  transform: translate(-50%, 0);
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  z-index: 10;
+}
+
+#units {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  padding: 20px;
+  color: blue;
+  height: 1.5rem;
+  text-decoration: underline;
+}
+
+#score {
+  top: 110px;
+  font-size: 50px;
+  font-weight: 300;
+  z-index: -1;
+}
+
+#tweet,
+#donation,
+#units {
+  font-size: 1.2rem;
+}
+
+#tweet {
+  text-align: left;
+  transition: 0.3s;
+  padding: 20px;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  position: absolute;
+}
+
+#donation {
+  z-index: 10;
+  position: absolute;
+  text-align: right;
+  padding: 20px;
+  bottom: 0;
+  right: 0;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 500px) {
+  #tweet,
+  #donation,
+  #units {
+    font-size: 1.05rem;
+  }
+  #container {
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border: none;
+  }
+
+  #container:after {
+    display: none;
+  }
+}
+
+.loadingIcon{
+  background-image: url("./assets/hand2.png");
+  width:100px;
+  height:100px;
+  background-size: contain;
+  bottom: 50%;
+  position: absolute;
+}
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.rotating {
+  -webkit-animation: rotating 2s linear infinite;
+  -moz-animation: rotating 2s linear infinite;
+  -ms-animation: rotating 2s linear infinite;
+  -o-animation: rotating 2s linear infinite;
+  animation: rotating 2s linear infinite;
+}
+
+@media screen and (max-width: 340px) {
+  #tweet {
+    bottom: 23px;
+  }
+  #donation {
+    left: 0;
+    right: unset;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  #tweet {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+  }
+  #units {
+    left: 0;
+    top: unset;
+    bottom: 0;
+  }
+}
