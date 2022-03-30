@@ -176,7 +176,7 @@ function mouseReleased() {
   }
   hand.endDrag();
 }
-function preload(imposter = "assets/shaon.png") {
+function preload(imposter = "assets/omor.png") {
   robotoFont = loadFont("https://slapchris.com/assets/Roboto-Light.ttf");
   slapsfx0 = loadSound("https://slapchris.com/assets/slap_str0.mp3");
   slapsfx1 = loadSound("https://slapchris.com/assets/slap_str1.mp3");
