@@ -56,7 +56,7 @@ body {
 }
 
 #record,
-#score, 
+#score,
 #imposter {
   position: absolute;
   left: 50%;
@@ -91,7 +91,6 @@ body {
 #donation,
 #units {
   font-size: 1.2rem;
-  position: relative;
 }
 
 #tweet {
@@ -119,6 +118,7 @@ body {
   #donation,
   #units {
     font-size: 1.05rem;
+    position: relative;
   }
   #units {
     margin-top: 2rem;
@@ -137,10 +137,10 @@ body {
   }
 }
 
-.loadingIcon{
+.loadingIcon {
   background-image: url("./assets/hand2.png");
-  width:100px;
-  height:100px;
+  width: 100px;
+  height: 100px;
   background-size: contain;
   bottom: 50%;
   position: absolute;
